@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    border-color: cornsilk;
+    border-style: double;
+}
+h2{
+    color:blue
+    
+}
+div{
+    display:inline-block;
+}
+button{
+    display: inline-block;
+    padding:10px 20px;
+}

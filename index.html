@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping Numbers</title>
+    <link rel="stylesheet" href="style.css" >
+  
+</head>
+<body style="background-color:palegreen;">
+    <h2 style="color: blue; background-color:white;">Pass by Value:</h2>
+   
+<script>
+    alert("Enter 2 values")
+    var x=prompt("Enter x: ")  
+    var y=prompt("Enter y: ")
+    document.write("Before: x= "+x+"  y= "+y+"<br>")
+    function swap(a,b){
+        let temp;
+        temp = a;
+        a = b;
+        b = temp;
+        document.write("INSIDE: a= "+a+"  b= "+b+"<br>")  
+    }
+    swap(x,y)
+    document.write("After:x= "+x+"  y= "+y+"<br>")
+</script>
+
+<h2 style="color: blue; background-color:white;">Pass by Reference:</h2>
+
+<script>
+    
+    function PassbyReference(obj) {
+    let tmp = obj.a;
+    obj.a = obj.b;
+    obj.b = tmp;
+
+    document.write(`INSIDE: a = ${obj.a} b = ${obj.b} <br>`);
+}
+
+let obj = {
+    a: x,
+    b: y
+
+}
+document.write(`Before: x = ${obj.a} y = ${obj.b} <br>`);
+
+PassbyReference(obj)
+
+document.write(`After: x = ${obj.a} y = ${obj.b} <br>`);
+
+</script>
+</body>
+</html>
